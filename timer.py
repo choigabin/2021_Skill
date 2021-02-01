@@ -1,36 +1,41 @@
+import tkinter
+import tkinter as tk
 from tkinter import *
 import tkinter.font
+import os
 
 window=Tk()
-
 window.title("Skill")
-window.geometry("640x400+100+100")
+window.geometry("640x400")
 window['bg'] = '#f2e2c6'
 window.resizable(False, False)
 
 font=tkinter.font.Font(family="HYHeadLine", size=10, weight='bold')
-timefont=tkinter.font.Font(family="HYHeadLine", size=30, weight='bold')
+timefont=tkinter.font.Font(family="HYHeadLine", size=40, weight='bold')
 
-timerBtn = Button(window,text="타이머",justify="center", bg='#8eb695',fg='#4f4f4f',width=26, height=2, font=font)
+timerBtn = tk.Button(window,text="타이머",justify="center", bg='#8eb695',fg='#4f4f4f',width=26, height=2, font=font)
 timerBtn.grid(column=0, row=0)
-planerWBtn = Button(window,text="플래너 작성",justify="center", bg='#fbdea2',fg='#4f4f4f',width=26, height=2, font=font)
+planerWBtn = tk.Button(window,text="플래너 작성",justify="center", bg='#fbdea2',fg='#4f4f4f',width=26, height=2, font=font)
 planerWBtn.grid(column=1, row=0)
-plannerRBtn=Button(window,text="플래너 보기",justify="center", bg='#fbdea2',fg='#4f4f4f',width=26, height=2, font=font)
+plannerRBtn = tk.Button(window,text="플래너 보기",justify="center", bg='#fbdea2',fg='#4f4f4f',width=26, height=2, font=font)
 plannerRBtn.grid(column=2, row=0)
 
-#아보카도 그림 놓기
-#abo = PhotoImage(fime="abocado.png")
-#abocado = Label(window, image=abo)
-#abocado.place(x=120, y=200)
+image = tk.PhotoImage(file="C:/2021_Skill/abokado.png",width=135, height=170)
+label = tk.Label(window, image=image, width=135, height=170, bg='#f2e2c6')
+label.place(x=50, y=110)
 
-timeLabel=Label(window, text="07:44:45", justify="center", bg='#f2e2c6', fg='#4f4f4f', font=timefont, width=10, height=1)
-timeLabel.place(x=210,y=100)
+timeLabel = tk.Label(window, text="07:44:45", justify="center", bg='#f2e2c6', fg='#4f4f4f', font=timefont, width=8, height=1)
+timeLabel.place(x=200,y=150)
 
-startBtn = Button(window, text="시작", padx=5, pady=5,width=7,bg='#8eb695', fg='#4f4f4f', font=font)
-stopBtn = Button(window, text="중지", padx=5, pady=5,width=7,bg='#8eb695', fg='#4f4f4f', font=font)
-endBtn = Button(window, text="종료", padx=5, pady=5,width=7,bg='#8eb695', fg='#4f4f4f', font=font)
-startBtn.place(x=200,y=200)
-stopBtn.place(x=300,y=200)
-endBtn.place(x=400,y=200)
+startBtn = tk.Button(window, text="시작", padx=5, pady=5,width=7,bg='#8eb695', fg='#4f4f4f', font=font)
+startBtn.place(x=200,y=240)
+stopBtn = tk.Button(window, text="중지", padx=5, pady=5,width=7,bg='#8eb695', fg='#4f4f4f', font=font)
+stopBtn.place(x=300,y=240)
+endBtn = tk.Button(window, text="종료", padx=5, pady=5,width=7,bg='#8eb695', fg='#4f4f4f', font=font)
+endBtn.place(x=400,y=240)
+
+image = tk.PhotoImage(file="C:/2021_Skill/kado.png",width=120, height=170)
+label = tk.Label(window, image=image, width=120, height=170, bg='#f2e2c6')
+label.place(x=400, y=110)
 
 window.mainloop()
