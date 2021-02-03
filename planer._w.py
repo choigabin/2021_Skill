@@ -21,26 +21,26 @@ plannerRBtn.grid(column=2, row=0)
 
 # 레이블(날짜)
 DateLabel = tkinter.Label(window, text="2021.01.28",bg='#f2e2c6', fg='#4f4f4f', font=labelFont)
-DateLabel.place(x=30, y=60)
+DateLabel.place(x=30, y=80)
 
 # textEdit(목표)
 PlanLabel = tkinter.Label(window, text="목표",bg='#f2e2c6', fg='#4f4f4f', font=labelFont)
-PlanLabel.place(x=30, y=100)
-PlanTextEdit = tkinter.Entry(window,font=font,width=45, bg='#f7efe1')
-PlanTextEdit.place(x=70, y=104)
+PlanLabel.place(x=30, y=126)
+PlanTextEdit = tkinter.Entry(window,font=font,width=55, bg='#f7efe1')
+PlanTextEdit.place(x=70, y=130)
 
 # 레이블(누적 시간)
 SumTimeLabel = tkinter.Label(window, text="07:44:45", justify="center", bg='#f2e2c6', fg='#4f4f4f', font=timeFont, width=8, height=1)
-SumTimeLabel.place(x=450, y=100)
+SumTimeLabel.place(x=500, y=125)
 
 # textEdit(내용)
-contentLabel = tkinter.Label(window, text="공부내용",bg='#f2e2c6', fg='#4f4f4f', font=labelFont)
-contentLabel.place(x=30, y = 140)
-contentText = tkinter.Text(window, bg='#f7efe1', width=60, height=13)
-contentText.place(x=30, y=170)
+contentLabel = tkinter.Label(window, text="내용",bg='#f2e2c6', fg='#4f4f4f', font=labelFont)
+contentLabel.place(x=30, y = 165)
+contentText = tkinter.Text(window, bg='#f7efe1', width=55, height=13)
+contentText.place(x=70, y=170)
 
 # 버튼
 writeBtn = tkinter.Button(window, text="작성",justify="center", bg='#8eb695', fg='#4f4f4f',width=7, height=1, font=font)
-writeBtn.place(x=500, y=310)
+writeBtn.place(x=515, y=317)
 
 window.mainloop()
